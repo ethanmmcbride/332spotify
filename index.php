@@ -1,4 +1,5 @@
 <?php
+// http://localhost/332Music/index.php
 // Database connection
 $conn = new mysqli('localhost', 'root', '', 'music_project');
 
