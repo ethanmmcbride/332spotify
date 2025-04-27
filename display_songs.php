@@ -1,24 +1,29 @@
 <h2>Song List</h2>
 <table>
     <tr>
-        <th>Album</th>
-        <th>Song Duration</th>
+        <th>Song</th>
+        <th>Duration</th>
         <th>Explicit</th>
         <th>Artist</th>
     </tr>
     <?php
-    $sql = "SELECT s.album_name, s.song_duration, s.explicit, a.name as artist_name 
-            FROM songs s 
-            JOIN artists a ON s.artist_id = a.artist_id";
+    function formatDuration($ms) {
+        $seconds = floor($ms / 1000);
+        $minutes = floor($seconds / 60);
+        $seconds = $seconds % 60;
+        return sprintf("%d:%02d", $minutes, $seconds);
+    }
+    $sql = "SELECT song, artist, explicit, duration_ms
+            FROM songs_normalize";
     $result = $conn->query($sql);
     
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-            echo "<tr>
-                    <td>" . htmlspecialchars($row['album_name']) . "</td>
-                    <td>" . $row['song_duration'] . "</td>
+            echo "<tr style='cursor: pointer;' onclick=\"window.location='index.php'\">
+                    <td>" . htmlspecialchars($row['song']) . "</td>
+                    <td>" . formatDuration($row['duration_ms']) . "</td>
                     <td>" . ($row['explicit'] ? 'Yes' : 'No') . "</td>
-                    <td>" . htmlspecialchars($row['artist_name']) . "</td>
+                    <td>" . htmlspecialchars($row['artist']) . "</td>
                   </tr>";
         }
     } else {
