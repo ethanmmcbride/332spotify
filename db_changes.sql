@@ -22,7 +22,7 @@ FOREIGN KEY (artist_id) REFERENCES spotify_artist_data(artist_id);
 ALTER TABLE users ADD PRIMARY KEY (username);
 
 --randomly assign users to the songs table to show last played by
-ALTER TABLE songs_normalize  ADD COLUMN last_played_by VARCHAR(15);
+ALTER TABLE songs_normalize  ADD COLUMN last_played_by VARCHAR(225);
 UPDATE songs_normalize
 SET last_played_by = (
     SELECT username
