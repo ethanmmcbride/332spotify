@@ -19,11 +19,14 @@
     
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-            echo "<tr style='cursor: pointer;' onclick=\"window.location='index.php'\">
+            $artist_url = 'artist_details.php?artist=' . urlencode($row['artist']);
+            
+            echo "<tr>
                     <td>" . htmlspecialchars($row['song']) . "</td>
                     <td>" . formatDuration($row['duration_ms']) . "</td>
                     <td>" . ($row['explicit'] ? 'Yes' : 'No') . "</td>
-                    <td>" . htmlspecialchars($row['artist']) . "</td>
+                    <td onclick=\"window.location='" . $artist_url . "'\" style='cursor: pointer; color: #007bff;'>" . 
+                        htmlspecialchars($row['artist']) . "</td>
                   </tr>";
         }
     } else {

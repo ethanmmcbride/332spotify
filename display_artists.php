@@ -13,8 +13,11 @@
     
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-            echo "<tr style='cursor: pointer;' onclick=\"window.location='index.php'\">
-                    <td>" . htmlspecialchars($row['Artist Name']) . "</td>
+            $artist_name = htmlspecialchars($row['Artist Name']);
+            $artist_url = 'artist_details.php?artist=' . urlencode($row['Artist Name']);
+            
+            echo "<tr style='cursor: pointer;' onclick=\"window.location='" . $artist_url . "'\">
+                    <td>" . $artist_name . "</td>
                     <td>" . htmlspecialchars($row['Lead Streams']) . "</td>
                     <td>" . htmlspecialchars($row['Feats']) . "</td>
                     <td>" . htmlspecialchars($row['Tracks']) . "</td>
