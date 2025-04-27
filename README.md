@@ -5,4 +5,4 @@ This is just our starter code that proves that we can
 
 use DBcreation.sql to create artist and songs DBs in phpMyAdmin --> import tab
 
-use data_load.sql for  DB population
+use data_load.sql for DB population
