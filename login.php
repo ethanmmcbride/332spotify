@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($password === $user['Password']) {
             // Store user data in session
             $_SESSION['username'] = $user['Username'];
-            $_SESSION['premium_user'] = $user['Premium_User'];
+            $_SESSION['premium_user'] = $user['Preium_User'];
             
             // Redirect to index.php
             header('Location: index.php');
