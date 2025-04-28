@@ -1,91 +1,119 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: "Circular", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #ffffff;
+  line-height: 1.5;
 }
 
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 h1 {
-    text-align: center;
-    color: #444;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #ffffff;
 }
 
 h2 {
-    color: #333;
-    margin-top: 30px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 30px 0 20px;
+  color: #ffffff;
 }
 
+/* Navigation and buttons */
 .buttons {
-    text-align: center;
-    margin: 20px 0;
+  display: flex;
+  margin: 25px 0;
+  gap: 10px;
 }
 
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 0 10px;
-    background: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
+  display: inline-block;
+  padding: 12px 24px;
+  background: #8f6593;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: none;
+  text-transform: uppercase;
 }
 
 .btn:hover {
-    background: #0056b3;
+  background: #A45198;
+  transform: scale(1.05);
 }
 
+/* Tables */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #181818;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 th {
-    background-color: #007bff;
-    color: white;
+  padding: 16px;
+  text-align: left;
+  color: #b3b3b3;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #282828;
 }
 
-/* Rows that are clickable */
+td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #282828;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Clickable rows */
 tr[onclick] {
-    transition: background-color 0.3s;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 tr[onclick]:hover {
-    background-color: #f0f0f0;
+  background-color: #333333;
 }
 
-tr:hover {
-    background-color: #f0f0f0
-}
-
-/* Clickable artist name in song list */
+/* Clickable cells */
 td[onclick] {
-    text-decoration: underline;
-    transition: color 0.3s;
+  cursor: pointer;
+  color: #1db954;
 }
 
 td[onclick]:hover {
-    color: #0056b3;
+  color: #1ed760;
+  text-decoration: underline;
 }
 
+/* Content section */
+.content {
+  background-color: #181818;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* User? */
 .user-info {
     text-align: right;
     margin-bottom: 20px;
@@ -111,3 +139,4 @@ td[onclick]:hover {
 .logout-btn:hover {
     text-decoration: underline;
 }
+
