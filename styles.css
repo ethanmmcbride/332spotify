@@ -85,3 +85,29 @@ td[onclick] {
 td[onclick]:hover {
     color: #0056b3;
 }
+
+.user-info {
+    text-align: right;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.premium-badge {
+    background-color: #2af805;
+    color: #000;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+.logout-btn {
+    color: #dc3545;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.logout-btn:hover {
+    text-decoration: underline;
+}
