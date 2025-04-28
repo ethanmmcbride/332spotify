@@ -1,6 +1,14 @@
 <?php
-// http://localhost/332Music/index.php
-// Database connection
+// index.php
+session_start();
+
+// Redirect to login if not logged in
+if (!isset($_SESSION['username'])) {
+    header('Location: login.php');
+    exit();
+}
+
+// Database connection - using music_project database
 $conn = new mysqli('localhost', 'root', '', 'music_project');
 
 // Check connection
@@ -22,6 +30,13 @@ $display = isset($_GET['display']) ? $_GET['display'] : 'none';
 <body>
     <div class="container">
         <h1>Music Database</h1>
+        <div class="user-info">
+            Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>
+            <?php if ($_SESSION['premium_user']): ?>
+                <span class="premium-badge">PREMIUM</span>
+            <?php endif; ?>
+            <a href="logout.php" class="logout-btn">Logout</a>
+        </div>
         
         <div class="buttons">
             <a href="index.php?display=songs" class="btn">Show Songs</a>
@@ -40,4 +55,4 @@ $display = isset($_GET['display']) ? $_GET['display'] : 'none';
     </div>
 </body>
 </html>
-<?php $conn->close(); ?>`
+<?php $conn->close(); ?>
