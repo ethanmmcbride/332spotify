@@ -21,6 +21,11 @@ h1 {
     color: #444;
 }
 
+h2 {
+    color: #333;
+    margin-top: 30px;
+}
+
 .buttons {
     text-align: center;
     margin: 20px 0;
@@ -58,6 +63,25 @@ th {
     color: white;
 }
 
+/* Rows that are clickable */
+tr[onclick] {
+    transition: background-color 0.3s;
+}
+
+tr[onclick]:hover {
+    background-color: #f0f0f0;
+}
+
 tr:hover {
-    background-color: #c71d11;
+    background-color: #f0f0f0
+}
+
+/* Clickable artist name in song list */
+td[onclick] {
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+td[onclick]:hover {
+    color: #0056b3;
 }
