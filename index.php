@@ -1,7 +1,6 @@
 <?php
 // index.php
 session_start();
-var_dump($_SESSION);
 
 // Redirect to login if not logged in
 if (!isset($_SESSION['username'])) {
