@@ -1,6 +1,11 @@
 <?php
 // login.php
 session_start();
+if(isset($_SESSION['username'])){
+    header('Location: index.php');
+    exit();
+}
+
 $error = '';
 
 // Database connection - using music_project database
