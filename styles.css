@@ -138,10 +138,3 @@ td[onclick]:hover {
 .logout-btn:hover {
     text-decoration: underline;
 }
-
-table a:link {
-  color :#1ed760
-}
-table a:visited {
-  color :#1ed760
-}
