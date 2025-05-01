@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 }
 
 // Determine what to display
-$display = isset($_GET['display']) ? $_GET['display'] : 'none';
+$display = isset($_GET['display']) ? $_GET['display'] : 'songs';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,6 +41,7 @@ $display = isset($_GET['display']) ? $_GET['display'] : 'none';
         <div class="buttons">
             <a href="index.php?display=songs" class="btn">Show Songs</a>
             <a href="index.php?display=artists" class="btn">Show Artists</a>
+            <a href="index.php?display=favorites" class="btn">Favorite Artists</a>
         </div>
         
         <div class="content">
@@ -49,6 +50,8 @@ $display = isset($_GET['display']) ? $_GET['display'] : 'none';
                 include 'display_songs.php';
             } elseif ($display == 'artists') {
                 include 'display_artists.php';
+            } elseif ($display == 'favorites') {
+                include 'favorites.php';
             }
             ?>
         </div>

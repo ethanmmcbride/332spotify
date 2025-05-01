@@ -102,7 +102,6 @@ td[onclick] {
 
 td[onclick]:hover {
   color: #1ed760;
-  text-decoration: underline;
 }
 
 /* Content section */
@@ -140,3 +139,36 @@ td[onclick]:hover {
     text-decoration: underline;
 }
 
+.favorite-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  color: white;
+  font-weight: bold;
+}
+
+.favorite-btn.add {
+  background-color: #114302;
+}
+
+.favorite-btn.add:hover {
+  background-color: #39f704;
+}
+
+.favorite-btn.remove {
+  background-color: #39f704;
+  color:#000;
+}
+
+.favorite-btn.remove:hover {
+  background-color: #269505;
+  color: rgb(0, 0, 0);
+}
+
+/* Prevent the button click from triggering the row click */
+.favorite-btn {
+  pointer-events: auto;
+}
