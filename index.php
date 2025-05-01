@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 }
 
 // Determine what to display
-$display = isset($_GET['display']) ? $_GET['display'] : 'none';
+$display = isset($_GET['display']) ? $_GET['display'] : 'songs';
 ?>
 <!DOCTYPE html>
 <html lang="en">

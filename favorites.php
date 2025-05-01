@@ -7,20 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favorite Artists</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h2>My Favorite Artists</h2>
@@ -29,7 +16,7 @@ session_start();
         echo "<table>
                 <tr>
                     <th>Artist Name</th>
-                    <th>Action</th>
+                    <th> </th>
                 </tr>";
         
         foreach ($_SESSION['favorites'] as $artist) {
@@ -50,6 +37,5 @@ session_start();
         echo "<p>You haven't added any artists to your favorites yet.</p>";
     }
     ?>
-    <p><a href="display_artists.php">Back to all artists</a></p>
 </body>
 </html>
