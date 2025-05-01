@@ -78,7 +78,6 @@ th {
 td {
   padding: 14px 16px;
   border-bottom: 1px solid #282828;
-  color :#dc3545
 }
 
 tr:last-child td {
@@ -103,7 +102,6 @@ td[onclick] {
 
 td[onclick]:hover {
   color: #1ed760;
-  text-decoration: underline;
 }
 
 /* Content section */
