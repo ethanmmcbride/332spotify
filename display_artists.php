@@ -24,11 +24,11 @@
             $artist_url = 'artist_details.php?artist=' . urlencode($row['Artist Name']);
             $is_favorite = in_array($row['Artist Name'], $_SESSION['favorites']);
             
-            echo "<tr>
-                    <td style='cursor: pointer;' onclick=\"window.location='" . $artist_url . "'\">" . $artist_name . "</td>
-                    <td style='cursor: pointer;' onclick=\"window.location='" . $artist_url . "'\">" . htmlspecialchars($row['Lead Streams']) . "</td>
-                    <td style='cursor: pointer;' onclick=\"window.location='" . $artist_url . "'\">" . htmlspecialchars($row['Feats']) . "</td>
-                    <td style='cursor: pointer;' onclick=\"window.location='" . $artist_url . "'\">" . htmlspecialchars($row['Tracks']) . "</td>
+            echo "<tr style='cursor: pointer;' onclick=\"window.location='". $artist_url . "'\">
+                    <td>" . $artist_name . "</td>
+                    <td>" . htmlspecialchars($row['Lead Streams']) . "</td>
+                    <td>" . htmlspecialchars($row['Feats']) . "</td>
+                    <td>" . htmlspecialchars($row['Tracks']) . "</td>
                     <td>
                         <form method='post' action='toggle_favorite.php' style='display: inline;'>
                             <input type='hidden' name='artist_name' value='" . htmlspecialchars($row['Artist Name']) . "'>
