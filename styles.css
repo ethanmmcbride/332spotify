@@ -146,25 +146,26 @@ td[onclick]:hover {
   cursor: pointer;
   font-size: 14px;
   transition: all 0.3s ease;
-}
-
-.favorite-btn.add {
-  background-color: #e0e0e0;
-  color: #333;
-}
-
-.favorite-btn.add:hover {
-  background-color: #d0d0d0;
-}
-
-.favorite-btn.remove {
-  background-color: #ffd700;
-  color: #000;
+  color: white;
   font-weight: bold;
 }
 
+.favorite-btn.add {
+  background-color: #114302;
+}
+
+.favorite-btn.add:hover {
+  background-color: #39f704;
+}
+
+.favorite-btn.remove {
+  background-color: #39f704;
+  color:#000;
+}
+
 .favorite-btn.remove:hover {
-  background-color: #e6c200;
+  background-color: #269505;
+  color: rgb(0, 0, 0);
 }
 
 /* Prevent the button click from triggering the row click */

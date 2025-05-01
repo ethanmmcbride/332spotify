@@ -5,7 +5,7 @@
         <th>Streams</th>
         <th>Features</th>
         <th>Tracks</th>
-        <th>Action</th>
+        <th>      </th>
     </tr>
     <?php
     session_start();
@@ -33,7 +33,7 @@
                         <form method='post' action='toggle_favorite.php' style='display: inline;'>
                             <input type='hidden' name='artist_name' value='" . htmlspecialchars($row['Artist Name']) . "'>
                             <button type='submit' class='" . ($is_favorite ? 'favorite-btn remove' : 'favorite-btn add') . "'>" . 
-                            ($is_favorite ? '★ Remove' : '☆ Add') . "</button>
+                                ($is_favorite ? '★ Added' : '☆ Add') . "</button>
                         </form>
                     </td>
                   </tr>";
