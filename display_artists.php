@@ -32,7 +32,8 @@
                     <td>
                         <form method='post' action='toggle_favorite.php' style='display: inline;'>
                             <input type='hidden' name='artist_name' value='" . htmlspecialchars($row['Artist Name']) . "'>
-                            <button type='submit'>" . ($is_favorite ? '★ Remove' : '☆ Add') . "</button>
+                            <button type='submit' class='" . ($is_favorite ? 'favorite-btn remove' : 'favorite-btn add') . "'>" . 
+                            ($is_favorite ? '★ Remove' : '☆ Add') . "</button>
                         </form>
                     </td>
                   </tr>";

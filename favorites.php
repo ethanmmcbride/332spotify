@@ -21,8 +21,8 @@ session_start();
         
         foreach ($_SESSION['favorites'] as $artist) {
             $artist_url = 'artist_details.php?artist=' . urlencode($artist);
-            echo "<tr>
-                    <td><a href='" . $artist_url . "'>" . htmlspecialchars($artist) . "</a></td>
+            echo "<tr style='cursor: pointer;' onclick=\"window.location='". $artist_url . "'\">
+                    <td>" . htmlspecialchars($artist) . "</td>
                     <td>
                         <form method='post' action='toggle_favorite.php' style='display: inline;'>
                             <input type='hidden' name='artist_name' value='" . htmlspecialchars($artist) . "'>
